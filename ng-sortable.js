@@ -78,8 +78,7 @@
 
 					function _emitEvent(/**Event*/evt, /*Mixed*/item) {
 						var name = 'on' + evt.type.charAt(0).toUpperCase() + evt.type.substr(1);
-						var source = getSource();
-
+						var source = getSource() || [];
 						/* jshint expr:true */
 						options[name] && options[name]({
 							model: item || source[evt.newIndex],
